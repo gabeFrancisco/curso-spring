@@ -1,10 +1,24 @@
 package com.gabefrank.produtosapi.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 //POJO -> Plain Old Java Object
+
+@Entity
+@Table
 public class Produto {
+
+    @Id
+    @Column
     private String id;
+    @Column
     private String nome;
+    @Column
     private String descricao;
+    @Column
     private Double preco;
 
     public String getId() {
