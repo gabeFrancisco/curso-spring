@@ -21,6 +21,11 @@ public class ProdutoController {
         return produtoRepository.findAll();
     }
 
+    @GetMapping("buscar")
+    public List<Produto> buscar(@RequestParam("nome") String nome){
+        return produtoRepository.findByNome(nome);
+    }
+
     @PostMapping
     public Produto salvar(@RequestBody Produto produto){
         System.out.println("Produto recebido: " + produto);
