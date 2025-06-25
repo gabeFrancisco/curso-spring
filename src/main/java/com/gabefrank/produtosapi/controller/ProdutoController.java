@@ -4,6 +4,7 @@ import com.gabefrank.produtosapi.model.Produto;
 import com.gabefrank.produtosapi.repository.ProdutoRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -13,6 +14,11 @@ public class ProdutoController {
 
     public ProdutoController(ProdutoRepository produtoRepository) {
         this.produtoRepository = produtoRepository;
+    }
+
+    @GetMapping
+    public List<Produto> retornarTodos(){
+        return produtoRepository.findAll();
     }
 
     @PostMapping
