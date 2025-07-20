@@ -1,8 +1,5 @@
 package com.gabefrank.produtosapi;
-
-import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.Banner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
